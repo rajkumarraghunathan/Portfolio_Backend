@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://sage-kitten-587de6.netlify.app');
+    res.setHeader('Access-Control-Allow-Origin: https://main--sage-kitten-587de6.netlify.app');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
