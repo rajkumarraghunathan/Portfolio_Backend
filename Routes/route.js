@@ -27,8 +27,8 @@ router.post('/sendEmail', (req, res) => {
         });
 
         const mailOptions = {
-            from: process.env.user,
-            to: email,
+            from: email,
+            to: process.env.user,
             subject: ` Potfolio Job Interview `,
             text: message,
         };
