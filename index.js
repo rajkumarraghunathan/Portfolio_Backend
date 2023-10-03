@@ -15,6 +15,7 @@ app.use(express.json());
 // Configure CORS
 app.use(cors({
     origin: 'https://main--sage-kitten-587de6.netlify.app',
+    credentials: true,
 }));
 
 app.use((req, res, next) => {
