@@ -12,11 +12,13 @@ const port = 4000;
 // Middleware
 app.use(express.json());
 
+app.use(cors('https://main--sage-kitten-587de6.netlify.app'))
+
 // Configure CORS
-app.use(cors({
-    origin: 'https://main--sage-kitten-587de6.netlify.app',
-    credentials: true,
-}));
+// app.use(cors({
+//     origin: 'https://main--sage-kitten-587de6.netlify.app',
+//     credentials: true,
+// }));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://main--sage-kitten-587de6.netlify.app');
