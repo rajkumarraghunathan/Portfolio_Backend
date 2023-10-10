@@ -11,8 +11,9 @@ const port = 4000;
 
 // Middleware
 app.use(express.json());
+app.options('*', cors('https://main--sage-kitten-587de6.netlify.app'));
 
-app.use(cors('https://main--sage-kitten-587de6.netlify.app'))
+// app.use(cors('https://main--sage-kitten-587de6.netlify.app'))
 
 // Configure CORS
 // app.use(cors({
@@ -26,7 +27,7 @@ app.use((req, res, next) => {
     // res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
-app.options('*', cors());
+
 // Database connection
 db();
 
