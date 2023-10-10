@@ -21,8 +21,8 @@ router.post('/sendEmail', (req, res) => {
 
             service: 'gmail',
             auth: {
-                // user: process.env.user,
-                user: email,
+                user: process.env.user,
+                // user: email,
                 pass: process.env.pass
             }
         });
